@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Комната в темноте</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1 class="title">Комната в темноте</h1>
+    <p class="subtitle">Найди все предметы, двигая фонарик мышкой</p>
+  </header>
+
+  <main class="layout">
+    <section class="game" aria-label="Игра">
+      <div id="scene" class="scene" aria-label="Комната">
+        <img id="roomImage" class="scene__image" src="assets/room.jpeg" alt="Комната" />
+        <div id="darkness" class="darkness" aria-hidden="true"></div>
+      </div>
+
+      <div id="win" class="win hidden" role="dialog" aria-modal="true" aria-label="Победа">
+        <div class="win__card">
+          <h2 class="win__title">Готово!</h2>
+          <p class="win__text">Ты нашёл все предметы.</p>
+          <button id="restartBtn" class="btn" type="button">Играть ещё раз</button>
+        </div>
+      </div>
+    </section>
+
+    <aside class="panel" aria-label="Список предметов">
+      <div class="panel__header">
+        <h2 class="panel__title">Найти</h2>
+        <div id="counter" class="counter">0/0</div>
+      </div>
+
+      <ul id="itemsList" class="items"></ul>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
